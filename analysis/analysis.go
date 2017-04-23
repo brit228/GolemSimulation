@@ -1,11 +1,11 @@
 package analysis
 
 import (
-	"otto"
+	"GoLEM/otto"
 	"os"
 	"io/ioutil"
-	Gerror "errorCodes"
-	. "structs"
+	Gerror "GoLEM/errorCodes"
+	. "GoLEM/structs"
 )
 
 var analysisVM *otto.Otto
@@ -35,7 +35,7 @@ func Analysis() {
 func AnalysisReadFile(file string) string {
 	f,err := os.Open(file)
 	if err != nil {
-		Gerror.GolemKill(2,"Golem: Error Opening Analysis Script!\n")
+		Gerror.GolemKill(2,"golem: Error Opening Analysis Script!\n")
 	}
 	defer f.Close()
 

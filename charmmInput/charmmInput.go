@@ -1,12 +1,12 @@
 package charmmInput
 
 import (
-	. "structs"
+	. "GoLEM/structs"
 	"os"
 	"bufio"
 	"strings"
 	"strconv"
-	Gerror "errorCodes"
+	Gerror "GoLEM/errorCodes"
 )
 
 var CharmmInput bool

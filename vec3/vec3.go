@@ -1,7 +1,7 @@
 package vec3
 
 import (
-	. "structs"
+	. "GoLEM/structs"
 	"math"
 	"math/rand"
 )

@@ -1,9 +1,9 @@
 package ljCalc
 
 import (
-	. "structs"
-	"vec3"
-	"genfuncs"
+	. "GoLEM/structs"
+	"GoLEM/vec3"
+	"GoLEM/genfuncs"
 	"math"
 )
 
@@ -12,9 +12,6 @@ func Compute(rCut Real, virSum, vdwSum *Real, region VecR, mol *Molecule) {
 	var n Int
 
 	rrCut = rCut * rCut
-	for n=0; n<mol.NumAtoms; n++ {
-		mol.Atoms[n].Ra = vec3.RZero()
-	}
 	for n=0; n<mol.NumAtoms; n++ {
 		for n2 := range mol.Atoms[n].NebrList {
 			EachCompute(mol, rrCut, vdwSum, virSum, n, Int(n2), region)

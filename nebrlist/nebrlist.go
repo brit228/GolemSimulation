@@ -1,8 +1,8 @@
 package nebrlist
 
 import (
-	. "structs"
-	"vec3"
+	. "GoLEM/structs"
+	"GoLEM/vec3"
 )
 
 func NebrBuild(rCut, rNebrShell Real, nebrTableLen, nOffset Int, cells VecI, region VecR, mol *Molecule, cellList []Int, vOff []VecI) {
