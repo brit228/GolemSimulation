@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "GoLEM/structs"
+	. "GolemSimulation/structs"
 )
 
 var inputConfigFile string

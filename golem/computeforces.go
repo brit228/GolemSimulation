@@ -1,10 +1,10 @@
 package main
 
 import (
-	. "GoLEM/structs"
-	"GoLEM/vec3"
-	lj "GoLEM/ljCalc"
-	electro "GoLEM/electroCalc"
+	. "GolemSimulation/structs"
+	"GolemSimulation/vec3"
+	lj "GolemSimulation/calc/ljCalc"
+	electro "GolemSimulation/calc/electroCalc"
 )
 
 func ComputeForces() {

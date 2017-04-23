@@ -1,8 +1,8 @@
 package boundary
 
 import (
-	. "GoLEM/structs"
-	"GoLEM/vec3"
+	. "GolemSimulation/structs"
+	"GolemSimulation/vec3"
 )
 
 func ApplyBoundaryConditions(mol *Molecule, region VecR) {

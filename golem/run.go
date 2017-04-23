@@ -1,9 +1,9 @@
 package main
 
 import (
-	leap "GoLEM/leapfrog"
-	"GoLEM/boundary"
-	nebr "GoLEM/nebrlist"
+	leap "GolemSimulation/integrate/leapfrog"
+	"GolemSimulation/boundary"
+	nebr "GolemSimulation/speedup/ljspeedup/nebrlist"
 )
 
 func RunJob() {

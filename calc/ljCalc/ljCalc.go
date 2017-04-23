@@ -1,9 +1,9 @@
 package ljCalc
 
 import (
-	. "GoLEM/structs"
-	"GoLEM/vec3"
-	"GoLEM/genfuncs"
+	. "GolemSimulation/structs"
+	"GolemSimulation/vec3"
+	"GolemSimulation/genfuncs"
 	"math"
 )
 

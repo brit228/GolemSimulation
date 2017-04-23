@@ -1,7 +1,7 @@
 package consts
 
 import (
-	. "GoLEM/structs"
+	. "GolemSimulation/structs"
 )
 
 const NDIM Int = 3

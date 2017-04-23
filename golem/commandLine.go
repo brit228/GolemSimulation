@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"runtime"
-	Gerror "GoLEM/errorCodes"
+	Gerror "GolemSimulation/errorCodes"
 )
 
 func ParseCommandLine() {

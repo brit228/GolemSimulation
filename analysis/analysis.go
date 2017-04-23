@@ -1,11 +1,11 @@
 package analysis
 
 import (
-	"GoLEM/otto"
+	"GolemSimulation/otto"
 	"os"
 	"io/ioutil"
-	Gerror "GoLEM/errorCodes"
-	. "GoLEM/structs"
+	Gerror "GolemSimulation/errorCodes"
+	. "GolemSimulation/structs"
 )
 
 var analysisVM *otto.Otto

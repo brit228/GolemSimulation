@@ -4,8 +4,8 @@ import (
 	"os"
 	"bufio"
 	"strings"
-	charmm "GoLEM/charmmInput"
-	Gerror "GoLEM/errorCodes"
+	charmm "GolemSimulation/input/charmmInput"
+	Gerror "GolemSimulation/errorCodes"
 )
 
 func ParseInputConfig(input string) {
@@ -22,7 +22,7 @@ func ParseInputConfig(input string) {
 func OpenConfigFile(file string) *os.File {
 	f,err := os.Open(file)
 	if err != nil {
-		Gerror.GolemKill()Kill(2,"GoLEM: Invalid File Location or File!\n")
+		Gerror.GolemKill(2,"GoLEM: Invalid File Location or File!\n")
 	}
 	defer f.Close()
 

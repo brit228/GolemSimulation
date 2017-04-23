@@ -1,8 +1,8 @@
 package leapfrog
 
 import (
-	"GoLEM/vec3"
-	. "GoLEM/structs"
+	"GolemSimulation/vec3"
+	. "GolemSimulation/structs"
 )
 
 func LeapfrogStep(typ int, mol *Molecule, deltaT Real) {

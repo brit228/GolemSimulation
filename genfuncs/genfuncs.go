@@ -1,7 +1,7 @@
 package genfuncs
 
 import (
-	. "GoLEM/structs"
+	. "GolemSimulation/structs"
 )
 
 func IntinExclusion(val Int, exclusions []Exclusion) bool {
