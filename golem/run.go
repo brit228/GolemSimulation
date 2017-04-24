@@ -10,7 +10,7 @@ func RunJob() {
 	for ; stepCount<numSteps; {
 		stepCount++
 		leap.LeapfrogStep(1, &mol, deltaT)
-		boundary.ApplyBoundaryConditions(&mol, region)
+		boundary.ApplyBoundaryConditions(&mol, region, wrapX, wrapY, wrapZ)
 		nebr.NebrBuild()
 		ComputeForces()
 		leap.LeapfrogStep(2, &mol, deltaT)

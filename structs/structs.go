@@ -48,6 +48,7 @@ type Exclusion struct {
 type Molecule struct {
 	Atoms []Atom
 	Bonds []Bond
+	Angles []Angle
 	Dihedrals []Dihedral
 	Impropers []Improper
 

@@ -96,6 +96,36 @@ func RRand(randSource rand.Source) VecR {
 	return v
 }
 
+func RWrapX(v1, region VecR) VecR {
+	var v VecR = v1
+	if v.X >= 0.5*region.X {
+		v.X -= region.X
+	} else if v.X < -0.5*region.X {
+		v.X += region.X
+	}
+	return v
+}
+
+func RWrapY(v1, region VecR) VecR {
+	var v VecR = v1
+	if v.Y >= 0.5*region.Y {
+		v.Y -= region.Y
+	} else if v.Y < -0.5*region.Y {
+		v.Y += region.Y
+	}
+	return v
+}
+
+func RWrapZ(v1, region VecR) VecR {
+	var v VecR = v1
+	if v.Z >= 0.5*region.Z {
+		v.Z -= region.Z
+	} else if v.Z < -0.5*region.Z {
+		v.Z += region.Z
+	}
+	return v
+}
+
 func RWrapAll(v1, region VecR) VecR {
 	var v VecR = v1
 	if v.X >= 0.5*region.X {

@@ -4,12 +4,12 @@ import (
 	"os"
 	"bufio"
 	"strings"
-	charmm "GolemSimulation/input/charmmInput"
+	charmm "GolemSimulation/input/charmmparamInput"
 	Gerror "GolemSimulation/errorCodes"
 )
 
-func ParseInputConfig(input string) {
-	inputFile := OpenConfigFile(input)
+func ParseInputConfig() {
+	inputFile := OpenConfigFile(inputConfigFile)
 	scanner := bufio.NewScanner(inputFile)
 	for scanner.Scan() {
 		text := scanner.Text()
@@ -32,16 +32,16 @@ func OpenConfigFile(file string) *os.File {
 func AllocateVar(variable string, inputs []string) {
 	if variable[0] != '#' {
 		switch variable {
-		case "charmmInput":
+		case "charmmparamInput":
 			if len(inputs) != 1 {
-				Gerror.GolemKill(2, "GoLEM: Incorrect number of inputs for charmmInput parameter!\n")
+				Gerror.GolemKill(2, "GoLEM: Incorrect number of inputs for charmmparamInput parameter!\n")
 			}
 			charmm.CharmmInput = bool(inputs[1])
 		case "psfInput":
 			if len(inputs) != 1 {
 				Gerror.GolemKill(2, "GoLEM: Incorrect number of inputs for psfInput parameter!\n")
 			}
-			charmm.PSFInput = inputs[1]
+			charmm.PSFInput = string(inputs[1])
 		}
 	}
 }
